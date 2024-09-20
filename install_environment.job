@@ -12,5 +12,5 @@ module purge
 module load 2022
 module load Anaconda3/2022.05
 
-cd $HOME/SentenceRepresentationsCodebase
-conda env create -f dl4nlp_gpu.yml
+cd $HOME/AdversarialGenAIDetector
+conda env create -f dl4nlp_gpu.yaml
