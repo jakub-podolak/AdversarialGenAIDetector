@@ -28,8 +28,5 @@ def create_sample_dataset() -> Dataset:
     return Dataset(df)
 
 
-# Register all the dataset here, so we can just use
+# Register all the datasets in __init__.py, so we can just use
 # `dataset = DATASETS["sample_dataset"]()` in code
-DATASETS: dict[str, callable] = {
-    "sample_dataset": create_sample_dataset
-}
