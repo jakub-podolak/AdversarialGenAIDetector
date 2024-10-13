@@ -1,3 +1,8 @@
 from .base_dataset import BaseDataset
 from .twitter_bot_dataset import TwitterBotDataset, TWITTER_BOT_DATASET_PATH
 from .followup_qg_dataset import FollowUpQGDataset, FOLLOWUP_QG_DATASET_PATH
+from .research_abstracts import ResearchAbstractsDataset, RESEARCH_ABSTRACTS_PATH
+from .chatgpt_article import ChatGPTArticleDataset, CHATGPT_ARTICLE_PATH
+from .hc3_dataset import HC3Dataset, HC3_DATASET_PATH
+from .twibot_22_dataset import TwiBot22Dataset, TWIBOT22_DATASET_PATH
+from .xsum_llama import XsumLlama, XSUM_LLAMA_DATASET_PATH, XSUM_VICUNA_DATASET_PATH

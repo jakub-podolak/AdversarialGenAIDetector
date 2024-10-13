@@ -4,6 +4,10 @@ SentEval/
 pretrained/glove.840B.300d.txt
 pretrained/
 tokenized/
+RADAR/
+output_roberta*
+user.json
+testing_stuff/
 
 # Slurm run outputs
 slurm_*

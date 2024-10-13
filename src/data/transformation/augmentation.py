@@ -145,6 +145,16 @@ ALL_AUGMENTATIONS = [
     ("StyleToScientific", StyleAugmentation().to_scientific)
 ]
 
+
+AUGMENTATIONS_BASE = [
+    ("RandomSpaces", RandomSpaces()),
+    ("RandomTypos", RandomTypos()),
+    ("RandomWordDeletion", RandomWordDeletion()),
+    ("RandomWordSwap", RandomWordSwap()),
+    ("RandomCaseChange", RandomCaseChange()),
+]
+
+
 ALL_AUGMENTATIONS_PROBA = [
     ("RandomSpaceWithProbability", RandomSpaceWithProbability(0.01)),
     ("RandomTypoWithProbability", RandomTypoWithProbability(0.01)),
@@ -166,6 +176,13 @@ def get_all_possible_augmentations(text: str, label: int) -> list[dict[str, str 
         })
 
     return result
+
+
+def create_base_augmentation_pipeline():
+    """
+    Create a pipeline of augmentations to apply to the data.
+    """
+    return Compose([augmentation for name, augmentation in AUGMENTATIONS_BASE])
 
     
 def create_augmentation_pipeline():

@@ -21,3 +21,11 @@ module load Anaconda3/2022.05
 
 source activate dl4nlp_gpu
 ```
+
+To run notebooks run this command in the terminal:
+```bash
+chmod a+x run_notebook.sh
+
+./run_notebook.sh
+```
+And follow the displayed instructions

@@ -6,25 +6,22 @@ class BaseDataset(Dataset):
     def __init__(
         self,
         data_path: str,
-        data_transforms: callable = None,
+        tokenize: callable = None,
         data_augmentations: callable = None,
-        is_test: bool = False,
+        is_test: bool = True,
     ):
-        self.data, self.labels = self.load_data_and_labels(data_path)
-        self.data_transforms = data_transforms
-        self.data_augmentations = data_augmentations
         self.is_test = is_test
+        self.data_augmentations = data_augmentations
+        self.tokenize = tokenize
+        self.data, self.labels = self.load_data_and_labels(data_path)
+        self.num_classes = len(set(self.labels))
 
     def __len__(self) -> int:
         return len(self.data)
 
-    def __getitem__(self, idx) -> tuple:
+    def __getitem__(self, idx) -> dict:
         sample, label = self.data[idx], self.labels[idx]
-        if self.is_test and self.data_augmentations:
-            sample = self.data_augmentations(sample)
-        if self.data_transforms:
-            sample = self.data_transforms(sample)
-        return sample, label
+        return {**sample, "label": label}
 
     @abstractmethod
     def load_data_and_labels(self, data_path, *args, **kwargs) -> tuple[list, list]:
