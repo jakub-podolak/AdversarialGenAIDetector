@@ -40,7 +40,7 @@ And follow the displayed instructions
 
 # 2. Downloading the datasets and model checkpoints
 
-To download datasets and model checkpoints, please download them from Google drive, and put the downloaded folders in the root directory of the project, so it looks like this:
+To download datasets and model checkpoints, please download them from [Google drive](https://drive.google.com/drive/folders/14dnW7LNL-qzdCqjKOV-wS-MNNVs9YA60?usp=sharing), and put the downloaded folders in the root directory of the project, so it looks like this:
 
 ```
 output_roberta_augmentations
