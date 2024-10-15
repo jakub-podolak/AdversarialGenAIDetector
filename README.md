@@ -67,8 +67,12 @@ raw_data
 ```
 
 
+# 3. Demo notebook
+
+Under `RADAR/demo.ipynb`, you can find a brief demonstration on how to use all the models, as well as how to perform the interpretability experiments using the `transformers-interpret library`.
+
 
 # 3. Evaluate the models
 
-To run the augmentations analysis, please refer to `test_models-JT.ipynb`
+To run the augmentations analysis, please refer to `test_models-JT.ipynb`.
 
