@@ -69,7 +69,9 @@ raw_data
 
 # 3. Demo notebook
 
-Under `RADAR/demo.ipynb`, you can find a brief demonstration on how to use all the models, as well as how to perform the interpretability experiments using the `transformers-interpret library`.
+In `demo.ipynb`, you can find a brief demonstration on how to use all the models, as well as how to perform the interpretability experiments using the `transformers-interpret library`.
+
+NOTE: Please move the notebook file into `RADAR/` directory, once you download it from the drive.
 
 
 # 3. Evaluate the models
